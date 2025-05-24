@@ -121,10 +121,10 @@
       "extensions": {
         "KHR_materials_pbrSpecularGlossiness": {
           "diffuseFactor": [
-            0.44952517950530896,
-            0.3202488238339978,
-            0.19243662494992447,
-            1.0
+            0.6,
+            0.6,
+            0.6,
+            1
           ],
           "glossinessFactor": 0.0,
           "specularFactor": [

@@ -3,13 +3,36 @@
     <head>
         <link rel="stylesheet" href="styles.css">
         <title>WebRig</title>
+        <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/128/760/760991.png">
     </head>
     <body>
-        <h1>WebRig</h1>
-        <main>
-            <div id="container3D"></div>
-        </main>
+    <div id="left-panel"></div>
+    <div id="right-panel">
+    <div class="info-section">
+        <h2>Model info</h2>
+        <p id="vertices">Vertices: </p>
+        <p id="triangles">Triangles: </p>
+        <p id="volume">Volume: </p>
+        <hr style="margin: 10px 0;">
+        <p id="sizeX">Width (X): </p>
+        <p id="sizeY">Height (Y): </p>
+        <p id="sizeZ">Depth (Z): </p>
+        <hr style="margin: 10px 0;">
+        <p id="fileSize">Depth (Z): </p>
+    </div>
 
-        <script type="module" src="js/content.js"></script>
-    </body>
+    <div class="button-group">
+        <button id="toggle-camera">Camera mode toggle</button>
+        <button id="download">Download</button>
+    </div>
+</div>
+
+
+    <h1>WebRig</h1>
+    <main>
+        <div id="container3D"></div>
+    </main>
+
+    <script type="module" src="content.js"></script>
+</body>
 </html>

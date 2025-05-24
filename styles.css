@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(to bottom right, rgb(5, 11, 63), rgb(0, 0, 0));
+    background-color: #181818;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -13,6 +13,14 @@ h1 {
     text-align: center;
   }
 
+p {
+  text-align: left;
+}
+
+h2 {
+  text-align: center;
+}
+
 #container3D canvas {
     width: 100vw ! important;
     height: 100vh ! important;
@@ -20,3 +28,73 @@ h1 {
     top: 0;
     left: 0;
 }
+
+#left-panel, #right-panel {
+    position: fixed;
+    top: 20px;
+    width: 400px;
+    height: calc(100vh - 40px);
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 12px;
+    z-index: 10;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#left-panel {
+    left: 20px;
+}
+
+#right-panel {
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main {
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.info-section p {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+}
+
+#download {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s ease;
+}
+
+#download:hover {
+    background-color: #218838;
+}
+
+#toggle-camera {
+    background-color: #a77f28;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s ease;
+}
+
+#toggle-camera:hover {
+    background-color: #885f21;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
