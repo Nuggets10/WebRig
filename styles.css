@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom right, rgb(5, 11, 63), rgb(0, 0, 0));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+    overflow-x: hidden;
+  }
+
+h1 {
+    text-align: center;
+  }
+
+#container3D canvas {
+    width: 100vw ! important;
+    height: 100vh ! important;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
