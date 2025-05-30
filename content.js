@@ -37,6 +37,10 @@ document.getElementById("toggle-camera").addEventListener("click", () => {
   isPerspective = !isPerspective;
 });
 
+document.getElementById("reset").addEventListener("click", () => {
+  location.reload();
+});
+
 function getCurrentCamera() {
   return isPerspective ? camera : orthoCamera;
 }
@@ -128,6 +132,7 @@ loader.load(
   function (gltf) {
     object = gltf.scene;
     scene.add(object);
+    object.scale.set(0.006, 0.008, 0.003);
     object.position.y -= 0.8;
   },
   undefined,
@@ -228,7 +233,6 @@ function animate() {
 
     const volume = computeModelVolume(object);
     const volumeRounded = volume.toFixed(3);
-    // Assicurati che esista l'elemento HTML con id 'volume'
     const volumeElement = document.getElementById("volume");
     if (volumeElement) {
       volumeElement.textContent = `Volume: ${volumeRounded} m³`;
