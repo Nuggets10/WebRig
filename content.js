@@ -1,6 +1,7 @@
 import * as THREE from "https://cdn.skypack.dev/three@0.129.0/build/three.module.js";
 import { OrbitControls } from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/controls/OrbitControls.js";
 import { GLTFLoader } from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/loaders/GLTFLoader.js";
+//import { GLTFExporter } from 'https://cdn.jsdelivr.net/npm/three@0.154.0/examples/jsm/exporters/GLTFExporter.js';
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(
@@ -63,8 +64,8 @@ function roundNumber(number, digits) {
         }
 
         function generateGridTexture() {
-  const size = 512;
-  const divisions = 16;
+  const size = 2048;
+  const divisions = 60;
   const canvas = document.createElement('canvas');
   canvas.width = canvas.height = size;
   const ctx = canvas.getContext('2d');
@@ -134,6 +135,7 @@ loader.load(
     scene.add(object);
     object.scale.set(0.006, 0.008, 0.003);
     object.position.y -= 0.8;
+    window.object = object;
   },
   undefined,
   function (error) {
@@ -154,7 +156,7 @@ const ambientLight = new THREE.AmbientLight(0xffffff, 1);
 scene.add(ambientLight);
 
 const gridTexture = generateGridTexture();
-const planeGeometry = new THREE.PlaneGeometry(6, 6);
+const planeGeometry = new THREE.PlaneGeometry(30, 30);
 const planeMaterial = new THREE.MeshStandardMaterial({ map: gridTexture });
 const plane = new THREE.Mesh(planeGeometry, planeMaterial);
 plane.rotation.x = -Math.PI / 2;

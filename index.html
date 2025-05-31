@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
     <title>WebRig</title>
     <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/128/760/760991.png">
 </head>
@@ -9,82 +9,6 @@
     <div id="left-panel">
         <div class="editor-section">
             <h2>Model editor</h2>
-            <hr style="margin: 10px 0;">
-            <p id="disclaimer">Head and neck</p>
-            <div class="slider-row">
-                <label for="head-height">Head height</label>
-                <input type="range" min="1" max="100" value="50" class="slider" id="head-height">
-            </div>
-            <div class="slider-row">
-                <label for="head-width">Head width</label>
-                <input type="range" min="1" max="100" value="50" class="slider" id="head-width">
-            </div>
-            <div class="slider-row">
-                <label for="neck-lenght">Neck lenght</label>
-                <input type="range" min="1" max="100" value="50" class="slider" id="neck-lenght">
-            </div>
-            <div class="slider-row">
-                <label for="neck-thickness">Neck thickness</label>
-                <input type="range" min="1" max="100" value="50" class="slider" id="neck-thickness">
-            </div>
-            <hr style="margin: 10px 0;">
-            <p id="disclaimer">Torso</p>
-            <div class="slider-row">
-                <label for="chest-height">Chest height</label>
-                <input type="range" min="1" max="100" value="50" class="slider" id="chest-height">
-            </div>
-            <div class="slider-row">
-                <label for="chest-depth">Chest depth</label>
-                <input type="range" min="1" max="100" value="50" class="slider" id="chest-depth">
-            </div>
-            <div class="slider-row">
-                <label for="waist-width">Waist width</label>
-                <input type="range" min="1" max="100" value="50" class="slider" id="waist-width">
-            </div>
-            <div class="slider-row">
-                <label for="waist-height">Waist height</label>
-                <input type="range" min="1" max="100" value="50" class="slider" id="waist-height">
-            </div>
-            <hr style="margin: 10px 0;">
-            <p id="disclaimer">Arms</p>
-            <div class="slider-row">
-                <label for="shoulder-width">Shoulder width</label>
-                <input type="range" min="1" max="100" value="50" class="slider" id="shoulder-width">
-            </div>
-            <div class="slider-row">
-                <label for="upperarm-lenght">Upperarm lenght</label>
-                <input type="range" min="1" max="100" value="50" class="slider" id="upperarm-lenght">
-            </div>
-            <div class="slider-row">
-                <label for="upperarm-thickness">Upperarm thickness</label>
-                <input type="range" min="1" max="100" value="50" class="slider" id="upperarm-thickness">
-            </div>
-            <div class="slider-row">
-                <label for="forearm-lenght">Forearm lenght</label>
-                <input type="range" min="1" max="100" value="50" class="slider" id="forearm-lenght">
-            </div>
-            <div class="slider-row">
-                <label for="forearm-thickness">Forearm thickness</label>
-                <input type="range" min="1" max="100" value="50" class="slider" id="forearm-thickness">
-            </div>
-            <hr style="margin: 10px 0;">
-            <p id="disclaimer">Legs</p>
-            <div class="slider-row">
-                <label for="thigh-lenght">Thigh lenght</label>
-                <input type="range" min="1" max="100" value="50" class="slider" id="thigh-lenght">
-            </div>
-            <div class="slider-row">
-                <label for="thigh-thickness">Thigh thickness</label>
-                <input type="range" min="1" max="100" value="50" class="slider" id="thigh-thickness">
-            </div>
-            <div class="slider-row">
-                <label for="calf-lenght">Calf lenght</label>
-                <input type="range" min="1" max="100" value="50" class="slider" id="calf-lenght">
-            </div>
-            <div class="slider-row">
-                <label for="calf-thickness">Calf thickness</label>
-                <input type="range" min="1" max="100" value="50" class="slider" id="calf-thickness">
-            </div>
             <hr style="margin: 10px 0;">
         </div>
     </div>
@@ -107,16 +31,17 @@
         <div class="button-group">
             <button id="reset">Reset</button>
             <button id="toggle-camera">Camera mode toggle</button>
-            <button id="download">Download</button>
+            <button onclick="downloadModifiedModel()" id="download">Download</button>
         </div>
     </div>
 
-    <h1></h1>
+    <h1>WebRig</h1>
 
     <main>
         <div id="container3D"></div>
     </main>
 
     <script type="module" src="content.js"></script>
+    <script type="module" src="boneEditor.js"></script>
 </body>
 </html>
